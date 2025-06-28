@@ -1,12 +1,8 @@
-import React from 'react';
-import ServiceImg from '../../public/service-img.svg'
-import ServiceIconFlat from '../../public/flat-icon.png';
 import { Link } from 'react-router-dom';
 
 function Service() {
     return (
         <section className="bg-white text-gray-800" id="service">
-            {/* Primeira seção: Project Management */}
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between mb-16">
                 <div className="max-w-lg">
                     <h2 className="text-3xl font-bold mb-4">Our Services</h2>
@@ -17,12 +13,12 @@ function Service() {
                         Login Now! →
                     </Link>
                 </div>
-                <img src={ServiceIconFlat} alt="" className='md:h-[580px] w-auto'/>
+                <img src='/flat-icon.png' alt="" className='md:h-[580px] w-auto'/>
             </div>
             <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
                 <div className="w-full md:w-1/2 flex justify-center">
                     <div className="">
-                        <img src={ServiceImg} alt="" className='pt-8 md:pt-0'/>
+                        <img src='/service-img.svg' alt="" className='pt-8 md:pt-0'/>
                     </div>
                 </div>
                 <div className="max-w-lg ">

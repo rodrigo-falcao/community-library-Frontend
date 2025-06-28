@@ -1,5 +1,3 @@
-import React from 'react';
-import heroImage from '../../public/img-hero.png'; // Ajuste o caminho conforme necessário
 
 function Hero() {
     return (
@@ -15,7 +13,7 @@ function Hero() {
                     </button>
                 </div>
                 <div className="">
-                    <img src={heroImage} alt="Community Library" />
+                    <img src='/img-hero.png' alt="Community Library" />
                 </div>
             </div>
         </section>
