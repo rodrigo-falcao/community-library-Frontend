@@ -49,9 +49,9 @@ function Solution() {
     return (
         <section className="bg-blue-900 text-white py-16 gap-3 flex flex-col" id="solutions">
             <div className='container mx-auto'>
-                <div className="flex flex-col md:flex-row items-center justify-between mb-16">
+                <div className="flex flex-col md:flex-row items-center justify-around mb-16">
                     <div className="max-w-lg">
-                        <h2 className="text-3xl font-bold mb-4">Use as Extension</h2>
+                        <h2 className="text-3xl font-bold mb-4"><span className='text-yellow-200'>Use as</span> Extension</h2>
                         <p className="text-lg mb-6">
                             Discover how the Community Library can transform your learning experience. Access a vast collection of books, 
                             participate in engaging community programs, and explore resources tailored to your needs. Whether you're looking 
@@ -61,11 +61,11 @@ function Solution() {
                             Let's Go →
                         </Link>
                     </div>
-                    <img src="/solution-img.svg" alt="Solution Image" />
+                    <img src="/solution-img.svg" alt="Solution Image" className='h-40 sm:h-56 md:h-72 lg:h-80 xl:h-[200px] 2xl:h-[280px] w-auto max-w-full'  />
                 </div>
                 <div className="bg-blue-900 text-white py-16">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold">What Our Clients Say</h2>
+                        <h2 className="text-3xl font-bold">What Our <span className='text-yellow-200'>Clients Say</span></h2>
                     </div>
                     <Swiper
                         spaceBetween={20}

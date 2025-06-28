@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 function Service() {
     return (
-        <section className="bg-white text-gray-800" id="service">
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between mb-16">
+        <section className="bg-white text-gray-800 pb-10 pt-5" id="service">
+            <div className="container flex flex-col mt-10 md:flex-row items-center justify-around mb-16 ">
                 <div className="max-w-lg">
                     <h2 className="text-3xl font-bold mb-4">Our Services</h2>
                     <p className="text-lg mb-6">
@@ -13,12 +13,12 @@ function Service() {
                         Login Now! →
                     </Link>
                 </div>
-                <img src='/flat-icon.png' alt="" className='md:h-[580px] w-auto'/>
+                <img src='/flat-icon.png' alt="" className='h-40 sm:h-56 md:h-72 lg:h-80 xl:h-[400px] 2xl:h-[480px] w-auto max-w-full'/>
             </div>
-            <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
+            <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-around">
                 <div className="w-full md:w-1/2 flex justify-center">
                     <div className="">
-                        <img src='/service-img.svg' alt="" className='pt-8 md:pt-0'/>
+                        <img src='/service-img.svg' alt="" className='h-40 sm:h-56 md:h-72 lg:h-80 xl:h-[360px] 2xl:h-[400px] w-auto max-w-full'/>
                     </div>
                 </div>
                 <div className="max-w-lg ">
