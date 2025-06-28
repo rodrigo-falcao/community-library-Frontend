@@ -13,7 +13,7 @@ export default function Login() {
     return (
         <div className="flex flex-col md:flex-row min-h-screen">
             {/* Lado esquerdo: cor primária */}
-            <div className="hidden md:block md:w-1/2 bg-primary">
+            <div className="hidden md:block md:w-1/2 bg-blue-900">
             <div className="flex items-center justify-center h-full text-white gap-4"> 
                 <Link to="/" className="flex items-center gap-2">
                     <img src="/logo-icon-white.svg" alt="" />

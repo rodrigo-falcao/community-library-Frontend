@@ -1,6 +1,7 @@
 import React from 'react';
 import ServiceImg from '../../public/service-img.svg'
 import ServiceIconFlat from '../../public/flat-icon.png';
+import { Link } from 'react-router-dom';
 
 function Service() {
     return (
@@ -12,9 +13,9 @@ function Service() {
                     <p className="text-lg mb-6">
                         Discover a wide range of books, resources, and community programs designed to inspire learning and connection. Our library is a welcoming space for everyone to explore, share, and grow together.
                     </p>
-                    <button className="bg-blue-500 text-white px-6 py-2 rounded font-semibold hover:bg-blue-600 transition">
+                    <Link to='/login' className="bg-blue-500 text-white px-6 py-2 rounded font-semibold hover:bg-blue-600 transition">
                         Login Now! →
-                    </button>
+                    </Link>
                 </div>
                 <img src={ServiceIconFlat} alt="" className='md:h-[580px] w-auto'/>
             </div>
