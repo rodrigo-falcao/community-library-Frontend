@@ -12,7 +12,7 @@ function Header() {
         setIsMenuOpen(false);
     };
     return (
-        <header className="bg-blue-900 text-white">
+        <header className="bg-blue-900 text-white py-4">
             <div className="container mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center">
@@ -46,8 +46,8 @@ function Header() {
                         X
                     </button>
                     <nav className="space-y-4">
-                        <a href="#products" className="hover:text-gray-200 transition duration-300 block cursor-pointer" onClick={closeMenu}>
-                            Products
+                        <a href="#services" className="hover:text-gray-200 transition duration-300 block cursor-pointer" onClick={closeMenu}>
+                            Services
                         </a>
                         <a href="#solutions" className="hover:text-gray-200 transition duration-300 block cursor-pointer" onClick={closeMenu}>
                             Solutions
@@ -73,7 +73,7 @@ function Header() {
                 </div>
                 <div className="hidden md:flex md:items-center md:space-x-6">
                     <nav className="space-y-4 md:space-y-0 md:flex md:space-x-6">
-                        <a href="#products" className="hover:text-gray-200 transition duration-300 block md:inline">
+                        <a href="#services" className="hover:text-gray-200 transition duration-300 block md:inline">
                             Services
                         </a>
                         <a href="#solutions" className="hover:text-gray-200 transition duration-300 block md:inline">
