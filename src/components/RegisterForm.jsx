@@ -44,14 +44,18 @@ const RegisterForm = () => {
             </div>
             {/* Lado direito: formulário de login */}
             <div className="w-full md:w-1/2 h-screen flex flex-col items-center justify-center bg-white">
-                <h2 className=" text-2xl font-bold text-black mb-2 text-center">Create your <span className='text-blue-900'>account with us!</span></h2>
-                <p className="text-black mb-6 text-center">
+                <h2 className="text-xl md:text-2xl font-bold text-black mb-1 md:mb-2 text-center">
+                    Create your <span className='text-blue-900'>account with us!</span>
+                </h2>
+                <p className="text-black mb-3 md:mb-6 text-center text-sm md:text-base">
                     Fill in the fields below to <span className='text-blue-900'>sign up</span> <br/>and become part of our community!
                 </p>
                 <form onSubmit={handleSubmit} className='w-full max-w-md p-8 rounded md:shadow-lg'>
                         <div className='flex items-center mb-6 gap-4 justify-center'>
-                            <img src="/logo-icon-blue.svg" alt="icon-library" className='flex justify-center align-center'/>
-                            <h3 className='text-black'>Library Community</h3>
+                            <Link to='/' className='flex items-center gap-2'>
+                                <img src="/logo-icon-blue.svg" alt="icon-library" className='flex justify-center align-center'/>
+                                <h3 className='text-black'>Library Community</h3>
+                            </Link>
                         </div>
                         <div>
                             <label htmlFor="userName" className="block mb-2 text-sm font-medium">Username</label>
