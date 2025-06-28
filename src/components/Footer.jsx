@@ -1,25 +1,35 @@
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 export default function Footer() {
+    const location = useLocation();
+
+    const handleHomeClick = (e) => {
+        if (location.pathname === "/") {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+        // Se não estiver na home, o Link faz a navegação normalmente
+    };
     return (
         <footer className="bg-blue-900 text-white pt-8 pb-8">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="flex items-center flex-col mb-2 text-lg">
-                        <div className="flex items-center mb-4">
+                        <Link to='/' onClick={handleHomeClick} className="flex items-center mb-4">
                             <img src="/logo-icon-white.svg" alt="logo" className="w-8 h-8 mr-2" />
                             <p>Library Community</p>
-                        </div>
+                        </Link>
                         <p className="text-blue-100 text-sm">
                             Community Library was created for people who love to read and share. We make a better learning space for everyone.
                         </p>
                     </div>
                     <div className="text-center flex justify-around">
-                        <Link to='#services' className="hover:text-gray-200 transition duration-300 block cursor-pointer">Services</Link>
-                        <Link to='#solutions' className="hover:text-gray-200 transition duration-300 block cursor-pointer">Solutions</Link>
-                        <Link to='#donate' className="hover:text-gray-200 transition duration-300 block cursor-pointer">Donate</Link>
+                        <Link to='/' onClick={handleHomeClick} className="hover:text-gray-200 transition duration-300 block cursor-pointer">Home</Link>
+                        <a href='#services' className="hover:text-gray-200 transition duration-300 block cursor-pointer">Services</a>
+                        <a href='#solutions' className="hover:text-gray-200 transition duration-300 block cursor-pointer">Solutions</a>
+                        <a href='#donate' className="hover:text-gray-200 transition duration-300 block cursor-pointer">Donate</a>
                     </div>
                     <div className="mb-4">
                         <div className="font-semibold mb-2 text-left">Try It Today</div>

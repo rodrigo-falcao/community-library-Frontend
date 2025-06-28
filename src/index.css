@@ -11,6 +11,10 @@
     --text-color: #1E1E1E;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
