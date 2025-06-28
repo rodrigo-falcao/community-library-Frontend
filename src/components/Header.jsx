@@ -12,31 +12,30 @@ function Header() {
         setIsMenuOpen(false);
     };
     return (
-        <header className=" text-white">
+        <header className="bg-blue-900 text-white">
             <div className="container mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center">
                     <Link to="/" className="flex items-center">
                     <img
-                        src="/flat-icon.png"
+                        src="/logo-icon-white.svg"
                         alt="Logo"
-                        className="h-10 w-10 rounded-full"
+                        className=""
                     />
-                    <h1 className="text-xl font-bold ml-2">Community Library</h1>
+                    <h1 className="text-xl ml-2">Library Community</h1>
                     </Link>
                 </div>
 
                 {/* Botão de menu mobile */}
                 <button
-                    className="md:hidden bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-200 transition duration-300"
+                    className="md:hidden bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-200 transition duration-300 cursor-pointer"
                     onClick={toggleMenu}
                 >
                     {isMenuOpen ? 'X' : 'Menu'}
                 </button>
-
                 {/* Menu lateral mobile */}
                 <div
-                    className={`fixed top-0 right-0 h-full w-64 bg-blue-500 text-white p-4 transform ${
+                    className={`fixed top-0 right-0 h-full w-64 bg-blue-800 text-white p-4 transform ${
                         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     } transition-transform duration-300 md:hidden`}
                 >
@@ -89,7 +88,7 @@ function Header() {
                     </nav>
                     <div className="space-y-4 md:space-y-0 md:flex md:space-x-4 mt-4 md:mt-0">
                         <button className="button primary px-4 py-2 rounded cursor-pointer">
-                            Login
+                            <Link to='/login'>Login</Link>
                         </button>
                         <button className="button secondary px-4 py-2 rounded cursor-pointer">
                             Try for Free
