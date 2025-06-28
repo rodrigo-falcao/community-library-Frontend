@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 function Hero() {
     return (
@@ -8,9 +9,9 @@ function Hero() {
                     <p className="text-lg mb-6">
                         Dive into a diverse collection of books and resources for every interest and age. Enjoy a welcoming space to read, learn, and share ideas with others. Start your next adventure with us today!
                     </p>
-                    <button className="bg-white text-blue-500 px-6 py-2 rounded font-semibold hover:bg-gray-200 transition cursor-pointer">
+                    <Link to='/register' className="bg-white text-blue-500 px-6 py-2 rounded font-semibold hover:bg-gray-200 transition cursor-pointer">
                         Try for free →
-                    </button>
+                    </Link>
                 </div>
                 <div className="">
                     <img src='/img-hero.png' alt="Community Library" />

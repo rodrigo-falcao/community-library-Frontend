@@ -26,9 +26,9 @@ function Service() {
                     <p className="text-lg mb-6">
                         Create an account to access a wide range of books, resources, and community programs. Join the Community Library and start your journey today!
                     </p>
-                    <button className="bg-blue-500 text-white px-6 py-2 rounded font-semibold hover:bg-blue-600 transition cursor-pointer">
+                    <Link to='/register' className="bg-blue-500 text-white px-6 py-2 rounded font-semibold hover:bg-blue-600 transition cursor-pointer">
                         Try it now →
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -23,12 +23,18 @@ export default function Login() {
             </div>
 
             {/* Lado direito: formulário de login */}
-            <div className="w-full md:w-1/2 h-screen flex items-center justify-center bg-white">
+            <div className="w-full md:w-1/2 h-screen flex items-center justify-center flex-col bg-white">
+                    <h2 className="text-2xl font-bold text-black mb-2 text-center">
+                        Welcome back to <span className='text-blue-900'>Library Community!</span>
+                    </h2>
+                    <p className="text-black mb-6 text-center">
+                        Enter your credentials below to <span className='text-blue-900'>log in</span> <br/>and access your account.
+                    </p>
                 <form
                     onSubmit={handleSubmit}
                     className="w-full max-w-md p-8 rounded md:shadow-lg"
                 >
-                    <div className="flex flex-col items-center">
+                    <div className="">
                         <div className="flex items-center mb-6 gap-4">
                             <Link to="/" className="flex items-center gap-2">
                                 <img
@@ -49,7 +55,7 @@ export default function Login() {
                                 type="text"
                                 value={usuario}
                                 onChange={(e) => setUsuario(e.target.value)}
-                                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="w-full px-4 py-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                                 required
                             />
                         </div>
@@ -62,7 +68,7 @@ export default function Login() {
                                 type="password"
                                 value={senha}
                                 onChange={(e) => setSenha(e.target.value)}
-                                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="w-full px-4 py-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white mb-4"
                                 required
                             />
                         </div>
