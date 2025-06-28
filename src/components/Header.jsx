@@ -52,11 +52,8 @@ function Header() {
                         <a href="#solutions" className="hover:text-gray-200 transition duration-300 block cursor-pointer" onClick={closeMenu}>
                             Solutions
                         </a>
-                        <a href="#resources" className="hover:text-gray-200 transition duration-300 block cursor-pointer" onClick={closeMenu}>
-                            Resources
-                        </a>
-                        <a href="#pricing" className="hover:text-gray-200 transition duration-300 block cursor-pointer" onClick={closeMenu}>
-                            Pricing
+                        <a href="#donate" className="hover:text-gray-200 transition duration-300 block cursor-pointer" onClick={closeMenu}>
+                            Donate
                         </a>
                     </nav>
                     <div className="space-y-4 mt-4 flex flex-col">
@@ -78,9 +75,6 @@ function Header() {
                         </a>
                         <a href="#solutions" className="hover:text-gray-200 transition duration-300 block md:inline">
                             Solutions
-                        </a>
-                        <a href="#resources" className="hover:text-gray-200 transition duration-300 block md:inline">
-                            Resources
                         </a>
                         <a href="#pricing" className="hover:text-gray-200 transition duration-300 block md:inline">
                             Donate

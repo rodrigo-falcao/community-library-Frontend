@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Service from '../components/Service';
 import Solution from '../components/Solution';
 import Donate from '../components/Donate';
+import Footer from '../components/Footer';
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
         <Service />
         <Solution />
         <Donate />
+        <Footer />
         </>
     );
 }
