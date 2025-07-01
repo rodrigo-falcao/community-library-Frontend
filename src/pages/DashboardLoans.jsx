@@ -166,7 +166,7 @@ export default function DashboardLoans() {
                                     <td className="py-2 px-4 border-b">
                                         <button
                                             onClick={() => deleteLoan(l.id)}
-                                            className="text-red-600 cursor-pointer hover:underline cursor-pointer"
+                                            className="text-red-600 cursor-pointer hover:underline "
                                         >
                                             Deletar
                                         </button>
