@@ -1,13 +1,41 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginComp = () => {
-    const [usuario, setUsuario] = useState("");
-    const [senha, setSenha] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Lógica de autenticação aqui
+        setError("");
+        try {
+            const response = await fetch("http://localhost:3000/users/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email,      
+                    password
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error("Usuário ou senha inválidos");
+            }
+
+            const data = await response.json();
+            // Supondo que o backend retorna { token: "JWT_AQUI" }
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("username", data.username);
+
+            // Redireciona para a área logada
+            navigate("/users");
+        } catch (error) {
+            setError(error.message);
+        }
     };
 
     return (
@@ -47,27 +75,27 @@ const LoginComp = () => {
                         </div>
                         <h2 className="text-2xl mb-2 text-center">Login</h2>
                         <div className="mb-6">
-                            <label className="block mb-2 text-sm font-medium" htmlFor="usuario">
-                                Usuário
+                            <label className="block mb-2 text-sm font-medium" htmlFor="email">
+                                Email
                             </label>
                             <input
-                                id="usuario"
-                                type="text"
-                                value={usuario}
-                                onChange={(e) => setUsuario(e.target.value)}
+                                id="email"
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 className="w-full px-4 py-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                                 required
                             />
                         </div>
                         <div className="mb-6">
                             <label className="block mb-2 text-sm font-medium" htmlFor="senha">
-                                Senha
+                                Password
                             </label>
                             <input
                                 id="senha"
                                 type="password"
-                                value={senha}
-                                onChange={(e) => setSenha(e.target.value)}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 className="w-full px-4 py-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-white mb-4"
                                 required
                             />
@@ -76,15 +104,20 @@ const LoginComp = () => {
                             type="submit"
                             className="w-full button secondary py-2 rounded font-semibold"
                         >
-                            Entrar
+                            Login
                         </button>
+                        {error && (
+                            <div className="bg-red-100 text-red-700 px-4 py-2 rounded mt-4 text-center font-semibold">
+                                {error}
+                            </div>
+                        )}
                     </div>
                     <div className="flex justify-between mt-6 text-sm">
                         <Link to="/register" className="text-primary hover:underline">
-                            Criar uma conta
+                            Create an account
                         </Link>
                         <Link to="/forgot-password" className="text-primary hover:underline">
-                            Esqueci minha senha
+                            Forgot my password
                         </Link>
                     </div>
                 </form>
